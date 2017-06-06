@@ -32,10 +32,6 @@ class ASCII_Image
     def initialize(uri, console_width = 80)
         @uri = uri
         @console_width = console_width
-        
-        if Magick::QuantumDepth > 8
-            raise "Your ImageMagick quantum depth is set to #{Magick::QuantumDepth}. You need to have it set to 8 in order for this app to work."
-        end
     end
     
     # Convert the image into ASCII and print it to the console.
